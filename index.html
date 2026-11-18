@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CaptaEarn — Solve Captcha, Earn USD</title>
+<meta name="description" content="CaptaEarn demo landing page. Solve captchas, earn USD. VIP members earn 2x per captcha. 7% lifetime referral commission. Withdraw via USDT (BSC), PayPal or Card.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="https://img.icons8.com/3d-fluency/94/money-bag.png">
+</head>
+<body>
+
+<!-- Demo ribbon -->
+<div class="demo-ribbon text-center py-1">
+  <i class="fa-solid fa-flask"></i> DEMO LANDING PAGE — preview only. Buttons below are placeholders; real signup lives in the full CaptaEarn app.
+</div>
+
+<!-- Nav -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="https://img.icons8.com/3d-fluency/94/money-bag.png" alt="" width="38" height="38">
+      <span class="brand-text">Capta<span>Earn</span></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#how">How it works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#earnings">Earnings</a></li>
+        <li class="nav-item"><a class="nav-link" href="#vip">VIP</a></li>
+        <li class="nav-item"><a class="nav-link" href="#withdraw">Withdraw</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="btn btn-outline-primary rounded-pill px-4" href="#demo">Try demo</a></li>
+        <li class="nav-item"><a class="btn btn-primary rounded-pill px-4" href="#cta">Get started</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5 py-5">
+      <div class="col-lg-6">
+        <span class="badge-soft"><i class="fa-solid fa-bolt"></i> Simple work. Real USD.</span>
+        <h1 class="display-5 fw-bold mt-3">Solve captcha.<br><span class="text-gradient">Earn USD.</span></h1>
+        <p class="lead text-muted mt-3">Type what you see, get paid per captcha. No investment needed to start — free members earn <strong>$0.002 per captcha</strong>, VIP members earn <strong>2x</strong>.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a class="btn btn-primary btn-lg rounded-pill px-4" href="#demo"><i class="fa-solid fa-play me-2"></i>Try the demo</a>
+          <a class="btn btn-light btn-lg rounded-pill px-4 border" href="#earnings"><i class="fa-solid fa-calculator me-2"></i>See earnings</a>
+        </div>
+        <div class="row g-3 mt-4">
+          <div class="col-4"><div class="mini-stat"><strong>$0.002</strong><span>per captcha</span></div></div>
+          <div class="col-4"><div class="mini-stat"><strong>2x</strong><span>VIP rate</span></div></div>
+          <div class="col-4"><div class="mini-stat"><strong>7%</strong><span>referral, lifetime</span></div></div>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <div class="hero-card">
+          <img class="hero-3d" src="https://img.icons8.com/3d-fluency/94/coins.png" alt="3D coins">
+          <div class="captcha-mock">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="mock-label"><i class="fa-solid fa-shield-halved"></i> Captcha #1,284</span>
+              <span class="mock-earn">+$0.002</span>
+            </div>
+            <div class="mock-code" id="heroCode">K 7 Q 2 P</div>
+            <div class="mock-input"><i class="fa-solid fa-keyboard me-2"></i>Type the code above…</div>
+            <button class="btn btn-primary w-100 rounded-pill mt-3" type="button" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Solve &amp; earn</button>
+          </div>
+          <img class="hero-3d small float-2" src="https://img.icons8.com/3d-fluency/94/rocket.png" alt="3D rocket">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Trust strip -->
+<section class="strip">
+  <div class="container">
+    <div class="row text-center g-3">
+      <div class="col-6 col-md-3"><i class="fa-solid fa-user-check"></i><p><strong>Free to join</strong><br><span>No deposit to start</span></p></div>
+      <div class="col-6 col-md-3"><i class="fa-solid fa-headset"></i><p><strong>Instant support</strong><br><span>Tickets + Telegram</span></p></div>
+      <div class="col-6 col-md-3"><i class="fa-solid fa-wallet"></i><p><strong>$5 min. withdraw</strong><br><span>USDT, PayPal, Card</span></p></div>
+      <div class="col-6 col-md-3"><i class="fa-solid fa-users"></i><p><strong>7% referral</strong><br><span>Lifetime, VIP members</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section id="how" class="section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="eyebrow">HOW IT WORKS</span>
+      <h2 class="fw-bold mt-2">Three steps to your first dollar</h2>
+      <p class="text-muted">No skills needed. If you can read and type, you can earn.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="step-card h-100">
+          <img src="https://img.icons8.com/3d-fluency/94/rocket.png" alt="" width="72" height="72">
+          <div class="step-num">1</div>
+          <h5 class="fw-bold mt-3"><i class="fa-solid fa-user-plus me-2 text-primary"></i>Create a free account</h5>
+          <p class="text-muted">Sign up with your email in under a minute. Your referral link is ready instantly.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card h-100">
+          <img src="https://img.icons8.com/3d-fluency/94/brain.png" alt="" width="72" height="72">
+          <div class="step-num">2</div>
+          <h5 class="fw-bold mt-3"><i class="fa-solid fa-keyboard me-2 text-primary"></i>Solve captchas</h5>
+          <p class="text-muted">Read the code, type it in, get credited instantly. Every correct solve pays — free or VIP rate.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card h-100">
+          <img src="https://img.icons8.com/3d-fluency/94/wallet.png" alt="" width="72" height="72">
+          <div class="step-num">3</div>
+          <h5 class="fw-bold mt-3"><i class="fa-solid fa-money-bill-transfer me-2 text-primary"></i>Withdraw your USD</h5>
+          <p class="text-muted">Reach $5 and cash out via USDT (BSC), PayPal or Bank Card. Requests are admin-reviewed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive demo -->
+<section id="demo" class="section section-blue">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <span class="eyebrow">LIVE DEMO</span>
+        <h2 class="fw-bold mt-2">Try one captcha right now</h2>
+        <p class="text-muted">This is a <strong>demo widget</strong> — it shows how solving feels. Demo balance is play money and pays nothing; real earnings happen in the full app.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-circle-check"></i> Correct answer = <strong>+$0.002</strong> demo credit</li>
+          <li><i class="fa-solid fa-circle-check"></i> VIP members earn double on every solve</li>
+          <li><i class="fa-solid fa-circle-check"></i> In the real app, captchas are server-verified images</li>
+        </ul>
+        <div class="demo-balance">
+          <span>Demo balance</span>
+          <strong id="demoBalance">$0.000</strong>
+          <small id="demoSolved">0 solved</small>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="demo-card">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <span class="mock-label"><i class="fa-solid fa-shield-halved"></i> Demo captcha</span>
+            <button class="btn btn-sm btn-outline-primary rounded-pill" type="button" id="refreshBtn"><i class="fa-solid fa-rotate me-1"></i> New code</button>
+          </div>
+          <div class="demo-code" id="demoCode">— — — — —</div>
+          <div class="input-group mt-3">
+            <span class="input-group-text"><i class="fa-solid fa-keyboard"></i></span>
+            <input type="text" class="form-control form-control-lg" id="demoInput" placeholder="Type the code here" autocomplete="off" maxlength="5">
+            <button class="btn btn-primary btn-lg px-4" type="button" id="demoSubmit">Verify</button>
+          </div>
+          <p class="demo-msg mt-3 mb-0" id="demoMsg">Type the 5 characters shown above.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Earnings -->
+<section id="earnings" class="section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="eyebrow">EARNINGS</span>
+      <h2 class="fw-bold mt-2">What can you earn?</h2>
+      <p class="text-muted">Rates from the live app settings. Estimates below assume every solve is correct.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6">
+        <div class="rate-card h-100">
+          <img src="https://img.icons8.com/3d-fluency/94/money.png" alt="" width="64" height="64">
+          <h5 class="fw-bold mt-2">Free member</h5>
+          <p class="rate-big">$0.002 <small>/ captcha</small></p>
+          <table class="table table-sm">
+            <tr><td>100 solves</td><td class="text-end fw-bold">$0.20</td></tr>
+            <tr><td>500 solves</td><td class="text-end fw-bold">$1.00</td></tr>
+            <tr><td>1,000 solves / day</td><td class="text-end fw-bold">$2.00 / day</td></tr>
+          </table>
+          <p class="text-muted small mb-0">Daily cap: 1,000 solves. Fair-play limits apply.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="rate-card vip h-100">
+          <span class="vip-tag"><i class="fa-solid fa-crown"></i> 2x EARNINGS</span>
+          <img src="https://img.icons8.com/3d-fluency/94/trophy.png" alt="" width="64" height="64">
+          <h5 class="fw-bold mt-2">VIP member</h5>
+          <p class="rate-big">$0.004 <small>/ captcha</small></p>
+          <table class="table table-sm">
+            <tr><td>100 solves</td><td class="text-end fw-bold">$0.40</td></tr>
+            <tr><td>500 solves</td><td class="text-end fw-bold">$2.00</td></tr>
+            <tr><td>1,000 solves / day</td><td class="text-end fw-bold">$4.00 / day</td></tr>
+          </table>
+          <p class="text-muted small mb-0">VIP also unlocks the 7% lifetime referral commission.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculator -->
+    <div class="calc-card mt-5">
+      <div class="row align-items-center g-4">
+        <div class="col-md-7">
+          <h5 class="fw-bold"><i class="fa-solid fa-calculator me-2 text-primary"></i>Earnings calculator <span class="badge bg-primary-subtle text-primary ms-1">estimate</span></h5>
+          <label class="form-label mt-3" for="calcRange">Captchas per day: <strong id="calcCount">500</strong></label>
+          <input type="range" class="form-range" id="calcRange" min="50" max="1000" step="50" value="500">
+          <div class="form-check form-switch mt-2">
+            <input class="form-check-input" type="checkbox" id="calcVip">
+            <label class="form-check-label" for="calcVip">I am a VIP member (2x rate)</label>
+          </div>
+        </div>
+        <div class="col-md-5 text-md-end">
+          <p class="text-muted mb-1">Estimated earnings</p>
+          <p class="calc-result"><span id="calcDay">$1.00</span><small> / day</small></p>
+          <p class="text-muted mb-0"><span id="calcMonth">$30.00</span> / month · <span id="calcYear">$365.00</span> / year</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIP -->
+<section id="vip" class="section section-blue">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 text-center">
+        <img src="https://img.icons8.com/3d-fluency/94/gift.png" alt="3D gift" class="img-fluid vip-img">
+      </div>
+      <div class="col-lg-6">
+        <span class="eyebrow">VIP MEMBERSHIP</span>
+        <h2 class="fw-bold mt-2">Double your pay. Unlock referrals.</h2>
+        <p class="lead text-muted">$9.99 for 30 days. One upgrade, two big wins:</p>
+        <ul class="check-list big">
+          <li><i class="fa-solid fa-circle-check"></i><strong>2x per captcha</strong> — $0.004 instead of $0.002, on every single solve.</li>
+          <li><i class="fa-solid fa-circle-check"></i><strong>7% referral commission</strong> — lifetime cut of everything your referrals earn, active while your VIP is active.</li>
+          <li><i class="fa-solid fa-circle-check"></i><strong>Priority support</strong> — VIP tickets answered first.</li>
+        </ul>
+        <a class="btn btn-primary btn-lg rounded-pill px-4 mt-3" href="#cta"><i class="fa-solid fa-crown me-2"></i>Upgrade to VIP</a>
+        <p class="text-muted small mt-3">Pay with USDT, PayPal or Card. Membership activates after admin confirmation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Referral -->
+<section class="section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="eyebrow">REFER &amp; EARN</span>
+        <h2 class="fw-bold mt-2">7% of their earnings. Forever.</h2>
+        <p class="text-muted">Share your link. Every time someone you invited solves a captcha, you earn 7% of their payout — for the lifetime of their account, as long as your VIP membership is active.</p>
+        <div class="ref-example">
+          <div><span>Your friend solves 1,000 captchas</span><strong>$2.00 earned</strong></div>
+          <div><span>You receive (7%)</span><strong class="text-primary">$0.14 — every time</strong></div>
+        </div>
+        <p class="text-muted small mt-3">Example only. Commission is credited instantly on each referral solve.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="link-mock">
+          <p class="fw-bold mb-2"><i class="fa-solid fa-link me-2 text-primary"></i>Your referral link</p>
+          <div class="input-group">
+            <input type="text" class="form-control" id="refLink" value="https://captaearn.example.com/signup.php?ref=DEMO1234" readonly>
+            <button class="btn btn-outline-primary" type="button" id="copyRef"><i class="fa-solid fa-copy"></i> Copy</button>
+          </div>
+          <p class="text-muted small mt-2 mb-0">Demo link shown. Your real link is generated on signup.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Withdraw -->
+<section id="withdraw" class="section section-blue">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="eyebrow">WITHDRAWALS</span>
+      <h2 class="fw-bold mt-2">Cash out your way</h2>
+      <p class="text-muted">Minimum withdrawal $5.00 · 0% fee · admin-reviewed for safety.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="pay-card h-100 text-center">
+          <img src="https://img.icons8.com/3d-fluency/94/coins.png" alt="" width="64" height="64">
+          <h5 class="fw-bold mt-3"><i class="fa-brands fa-bitcoin me-2 text-primary"></i>USDT (BSC)</h5>
+          <p class="text-muted">BEP20 Tether to your wallet address. Low network fees, fast settlement.</p>
+          <span class="badge bg-primary-subtle text-primary rounded-pill">Most popular</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="pay-card h-100 text-center">
+          <img src="https://img.icons8.com/3d-fluency/94/wallet.png" alt="" width="64" height="64">
+          <h5 class="fw-bold mt-3"><i class="fa-brands fa-paypal me-2 text-primary"></i>PayPal</h5>
+          <p class="text-muted">Direct to your PayPal email. Simple if you already use PayPal every day.</p>
+          <span class="badge bg-primary-subtle text-primary rounded-pill">Easy &amp; familiar</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="pay-card h-100 text-center">
+          <img src="https://img.icons8.com/3d-fluency/94/money-bag.png" alt="" width="64" height="64">
+          <h5 class="fw-bold mt-3"><i class="fa-solid fa-credit-card me-2 text-primary"></i>Bank Card</h5>
+          <p class="text-muted">Payout to your bank card. Only the last 4 digits are ever stored.</p>
+          <span class="badge bg-primary-subtle text-primary rounded-pill">Secure</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Support -->
+<section class="section">
+  <div class="container">
+    <div class="support-banner">
+      <div class="row align-items-center g-4">
+        <div class="col-md-8">
+          <h3 class="fw-bold mb-2"><img src="https://img.icons8.com/3d-fluency/94/headset.png" alt="" width="52" height="52" class="me-2">Instant support, real humans</h3>
+          <p class="text-muted mb-0">Stuck on a payout or a captcha? Open a support ticket inside the app or reach us on Telegram / WhatsApp. VIP tickets get priority replies.</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <a class="btn btn-primary rounded-pill px-4" href="#cta"><i class="fa-solid fa-headset me-2"></i>Contact support</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section pt-0">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="fw-bold mt-2">Questions, answered</h2>
+    </div>
+    <div class="accordion mx-auto faq-max" id="faqAcc">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#f1">Is CaptaEarn really free to join?</button></h2>
+        <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body text-muted">Yes. Signup is free and free members earn $0.002 per correct captcha. VIP is optional — it doubles your rate and unlocks referral commission.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">How does the 7% referral commission work?</button></h2>
+        <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body text-muted">You earn 7% of every referral's captcha earnings, for the lifetime of their account — credited instantly on each of their solves, as long as your own VIP membership is active. If your VIP lapses, commission pauses until you renew; missed commission is not back-paid.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">How and when can I withdraw?</button></h2>
+        <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body text-muted">Once your balance reaches $5.00, request a withdrawal to USDT (BSC/BEP20), PayPal or Bank Card. The amount is held immediately, an admin reviews the request, and approved payouts are sent with a transaction reference. Rejected requests are refunded to your balance.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4">Are there limits on solving?</button></h2>
+        <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body text-muted">Yes, fair-play limits keep the system honest: at least 4 seconds between solves, max 300 per hour and 1,000 per day. Bots and scripts are not allowed — accounts breaking the rules can be banned.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f5">What happens when my VIP expires?</button></h2>
+        <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body text-muted">Your rate returns to $0.002 per captcha and referral commission pauses. Your balance and referrals stay safe — renew VIP anytime to get 2x and commission back.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f6">Is this demo page the real app?</button></h2>
+        <div id="f6" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body text-muted">No — this is a demo landing page. The demo captcha widget pays play money only. The full CaptaEarn app (PHP + MySQL, cPanel-ready) has real accounts, server-verified captchas, real balances and withdrawals.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="section pt-0">
+  <div class="container">
+    <div class="cta-box text-center">
+      <img src="https://img.icons8.com/3d-fluency/94/shield.png" alt="" width="72" height="72">
+      <h2 class="fw-bold mt-3">Ready to turn typing into USD?</h2>
+      <p class="text-muted mx-auto cta-sub">Join free, solve your first captcha in a minute, and upgrade to VIP whenever you want double pay.</p>
+      <a class="btn btn-light btn-lg rounded-pill px-5 mt-2" href="#demo"><i class="fa-solid fa-play me-2"></i>Try the demo first</a>
+      <p class="small mt-3 mb-0 opacity-75">Demo page — signup opens with the full app launch.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="https://img.icons8.com/3d-fluency/94/money-bag.png" alt="" width="32" height="32">
+          <span class="brand-text">Capta<span>Earn</span></span>
+        </a>
+        <p class="text-muted small mt-2 mb-0">Solve captcha, earn USD. Demo landing page — earnings shown are estimates from the app's published rates, not guaranteed income.</p>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bold">Product</h6>
+        <ul class="list-unstyled small text-muted">
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#earnings">Earnings</a></li>
+          <li><a href="#vip">VIP</a></li>
+          <li><a href="#withdraw">Withdraw</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="fw-bold">Support</h6>
+        <ul class="list-unstyled small text-muted">
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#demo">Demo captcha</a></li>
+          <li><a href="#cta">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p class="text-muted small text-center mb-0">© 2026 CaptaEarn · Demo landing page · 3D icons by <a href="https://icons8.com" rel="nofollow">Icons8</a></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
